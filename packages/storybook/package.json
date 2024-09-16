@@ -1,0 +1,9 @@
+{
+  "name": "@newline-ds/storybook",
+  "packageManager": "yarn@4.5.0",
+  "private": true,
+  "dependencies": {
+    "@newline-ds/foundation": "workspace:^",
+    "@newline-ds/react": "workspace:^"
+  }
+}

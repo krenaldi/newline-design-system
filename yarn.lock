@@ -5,6 +5,29 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@newline-ds/foundation@workspace:^, @newline-ds/foundation@workspace:packages/foundation":
+  version: 0.0.0-use.local
+  resolution: "@newline-ds/foundation@workspace:packages/foundation"
+  languageName: unknown
+  linkType: soft
+
+"@newline-ds/react@workspace:^, @newline-ds/react@workspace:packages/react":
+  version: 0.0.0-use.local
+  resolution: "@newline-ds/react@workspace:packages/react"
+  dependencies:
+    "@newline-ds/foundation": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@newline-ds/storybook@workspace:packages/storybook":
+  version: 0.0.0-use.local
+  resolution: "@newline-ds/storybook@workspace:packages/storybook"
+  dependencies:
+    "@newline-ds/foundation": "workspace:^"
+    "@newline-ds/react": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "system-design-demo@workspace:.":
   version: 0.0.0-use.local
   resolution: "system-design-demo@workspace:."
