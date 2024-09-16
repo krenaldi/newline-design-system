@@ -8,6 +8,8 @@ __metadata:
 "@newline-ds/foundation@workspace:^, @newline-ds/foundation@workspace:packages/foundation":
   version: 0.0.0-use.local
   resolution: "@newline-ds/foundation@workspace:packages/foundation"
+  dependencies:
+    typescript: "npm:^5.6.2"
   languageName: unknown
   linkType: soft
 
@@ -16,6 +18,7 @@ __metadata:
   resolution: "@newline-ds/react@workspace:packages/react"
   dependencies:
     "@newline-ds/foundation": "workspace:^"
+    typescript: "npm:^5.6.2"
   languageName: unknown
   linkType: soft
 
@@ -25,11 +28,54 @@ __metadata:
   dependencies:
     "@newline-ds/foundation": "workspace:^"
     "@newline-ds/react": "workspace:^"
+    typescript: "npm:^5.6.2"
   languageName: unknown
   linkType: soft
 
 "system-design-demo@workspace:.":
   version: 0.0.0-use.local
   resolution: "system-design-demo@workspace:."
+  dependencies:
+    typescript: "npm:4.7.2"
   languageName: unknown
   linkType: soft
+
+"typescript@npm:4.7.2":
+  version: 4.7.2
+  resolution: "typescript@npm:4.7.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/c458df58a52f1cb1c954109dbc3477abfeb632644bc6552a9ac2152bce86e377afe11bf661466926bc4dcdc945f1e053d492c347ae377f1cba7051226b930ea3
+  languageName: node
+  linkType: hard
+
+"typescript@npm:^5.6.2":
+  version: 5.6.2
+  resolution: "typescript@npm:5.6.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/3ed8297a8c7c56b7fec282532503d1ac795239d06e7c4966b42d4330c6cf433a170b53bcf93a130a7f14ccc5235de5560df4f1045eb7f3550b46ebed16d3c5e5
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A4.7.2#optional!builtin<compat/typescript>":
+  version: 4.7.2
+  resolution: "typescript@patch:typescript@npm%3A4.7.2#optional!builtin<compat/typescript>::version=4.7.2&hash=65a307"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/f454730aef4a8cef2ad5650ce769f38ed4460583fe5867d4f93592282afdbd9b5142b75d448b647e4984edf23575ac1f2adafb2db8614f253f700721d3eb439a
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^5.6.2#optional!builtin<compat/typescript>":
+  version: 5.6.2
+  resolution: "typescript@patch:typescript@npm%3A5.6.2#optional!builtin<compat/typescript>::version=5.6.2&hash=8c6c40"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/94eb47e130d3edd964b76da85975601dcb3604b0c848a36f63ac448d0104e93819d94c8bdf6b07c00120f2ce9c05256b8b6092d23cf5cf1c6fa911159e4d572f
+  languageName: node
+  linkType: hard
