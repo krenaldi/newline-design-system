@@ -1,6 +1,6 @@
 {
   "name": "@newline-ds/storybook",
-  "packageManager": "yarn@4.5.0",
+  "packageManager": "yarn@3.8.5",
   "private": true,
   "dependencies": {
     "@newline-ds/foundation": "workspace:^",
