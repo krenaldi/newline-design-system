@@ -4,5 +4,8 @@
   "devDependencies": {
     "style-dictionary": "^4.1.1",
     "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "build-tokens": "style-dictionary build --config sd.config.js"
   }
 }
