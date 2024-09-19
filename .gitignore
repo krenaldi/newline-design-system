@@ -131,3 +131,5 @@ dist
 
 packages/**/lib/
 .yarn/cache
+
+*storybook.log
