@@ -1,6 +1,7 @@
 {
   "name": "@newline-ds/foundation",
   "packageManager": "yarn@3.8.5",
+  "version": "0.0.1",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "devDependencies": {
