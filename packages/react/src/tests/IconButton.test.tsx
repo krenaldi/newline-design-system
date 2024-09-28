@@ -9,7 +9,7 @@ expect.extend(toHaveNoViolations);
 test('tests icon button render and click callback', async () => {
   const handleClick = jest.fn();
   const { container } = render(
-    <IconButton onClick={handleClick}>
+    <IconButton onClick={handleClick} aria-label="icon button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
