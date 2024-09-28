@@ -1,6 +1,6 @@
-import { forwardRef } from 'react';
+import { forwardRef, ComponentProps } from 'react';
 
-export interface IconButtonProps extends React.ComponentProps<'button'> {
+export interface IconButtonProps extends ComponentProps<'button'> {
   /** If button is in disabled state */
   disabled?: boolean;
   /** Loading state */

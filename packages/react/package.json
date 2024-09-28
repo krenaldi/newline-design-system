@@ -2,16 +2,20 @@
   "name": "@newline-ds/react",
   "packageManager": "yarn@3.8.5",
   "scripts": {
-    "build": "tsc"
+    "build": "yarn build:css && tsc",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./lib/output.css --watch",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./lib/output.css"
   },
   "dependencies": {
-    "@newline-ds/foundation": "workspace:^"
+    "@newline-ds/foundation": "workspace:^",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2"
   },
   "peerDependencies": {
