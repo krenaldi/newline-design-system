@@ -1,0 +1,38 @@
+name: 'Release Workflow'
+on:
+  # No auto run
+  workflow_dispatch:
+
+permissions:
+  contents: write # for checkout and tag
+  pull-requests: write # for comments
+  packages: write # for publish
+
+jobs:
+  test-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20
+      - name: Install packages
+        run: yarn
+      - name: Build packages in order
+        run: yarn workspace @newline-ds/foundation build && yarn workspace @newline-ds/react build
+      - name: Run our tests
+        run: yarn workspace @newline-ds/react test
+      - name: Bump versions and publish with changesets
+        run: |
+          # Bump versions
+          yarn changeset version
+          # Publish to npm (not configured in our case)
+          # Need to change slightly, as there is a known issue with workspace:^ versioning
+          # Issue: https://github.com/changesets/changesets/issues/432
+          yarn workspaces foreach --no-private --from '@newline-ds/*' npm publish --access public
+          yarn changeset tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
