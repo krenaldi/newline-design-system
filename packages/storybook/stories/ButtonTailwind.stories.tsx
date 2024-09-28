@@ -1,8 +1,9 @@
-import Button, { ButtonProps } from '@newline-ds/react/src/Button';
+import Button, { ButtonProps } from '@newline-ds/react/src/ButtonTailwind';
 import { Meta, StoryFn } from '@storybook/react';
+import '@newline-ds/react/lib/output.css';
 
 export default {
-  title: 'Newline/Button',
+  title: 'Newline/ButtonTailwind',
   component: Button,
   tags: ['autodocs'],
   parameters: {
@@ -20,7 +21,7 @@ const Template: StoryFn<ButtonProps> = (args: ButtonProps) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Demo Button',
+  children: 'Tailwind Demo',
   disabled: false,
   loading: false,
 };
