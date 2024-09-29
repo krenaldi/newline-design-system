@@ -19,7 +19,9 @@ jobs:
         with:
           node-version: 20
       - name: Install packages
-        run: yarn
+        run: |
+          yarn
+          yarn plugin import @yarnpkg/plugin-workspace-tools
       - name: Build packages in order
         run: yarn workspace @newline-ds/foundation build && yarn workspace @newline-ds/react build
       - name: Run our tests
